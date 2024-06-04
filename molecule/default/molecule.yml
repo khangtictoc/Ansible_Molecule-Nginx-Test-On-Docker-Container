@@ -1,0 +1,23 @@
+---
+dependency:
+  name: galaxy
+driver:
+  name: docker
+platforms:
+  - name: instance
+    image: ubuntu:22.04
+    privileged: true
+    #command: /sbin/init
+provisioner:
+  name: ansible
+scenario:
+  name: default
+verifier:
+  name: testinfra
+  options:
+    # pytest-ansible conflicts with --connection
+    p: "no:pytest-ansible"
+
+    # avoid loading global pyproject.toml options, so we don't
+    # load the setting that says "disable testinfra"
+    c: "."

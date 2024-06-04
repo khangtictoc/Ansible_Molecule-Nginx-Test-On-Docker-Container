@@ -1,0 +1,18 @@
+# tasks/main.yml
+---
+
+- name: install nginx
+  apt:
+    name: nginx
+    state: present
+
+- name: start nginx
+  service:
+    name: nginx
+    state: started
+
+- name: add default host configuration
+  copy:
+    src: default
+    dest: /etc/nginx/sites-enabled/default
+  notify: reload nginx
