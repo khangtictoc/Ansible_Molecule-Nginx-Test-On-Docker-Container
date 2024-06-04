@@ -15,4 +15,4 @@
   copy:
     src: default
     dest: /etc/nginx/sites-enabled/default
-  notify: reload nginx
+  notify: Reload nginx
