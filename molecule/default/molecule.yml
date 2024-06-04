@@ -12,6 +12,9 @@ provisioner:
   name: ansible
 scenario:
   name: default
+
+lint: yamllint
+
 verifier:
   name: testinfra
   options:

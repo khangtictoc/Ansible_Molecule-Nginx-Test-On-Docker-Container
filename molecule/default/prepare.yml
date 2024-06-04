@@ -3,7 +3,7 @@
 
 - hosts: all
   tasks:
-    - name: install curl
+    - name: Install curl
       apt:
         name: curl
         state: present

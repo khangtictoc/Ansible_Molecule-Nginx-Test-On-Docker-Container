@@ -1,0 +1,2 @@
+# Log file when running `Pytest`. Locate at ./molecule/{scenario_name}
+**/pytestdebug.log
